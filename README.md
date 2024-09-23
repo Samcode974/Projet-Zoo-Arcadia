@@ -6,8 +6,8 @@
 ### Pour lancer le projet, voici les commande à entrer dans le terminal:
 
 #### Prérequis: 
-- Avoir une base de donnée mysql configué.
-    - Mettre les informations de connexion dans un fichier nommer .env.  (Se baser sur le fichier .env.example)
+- Avoir une base de donnée mysql configurée.
+    - Mettre les informations de connexion dans un fichier nommer .env  (Se baser sur le fichier .env.example)
 - Avoir php 8 d'installé
 
 #### Mise en place de la bdd
@@ -33,3 +33,5 @@
     ```console
        php artisan serve
     ```
+
+Pour accéder à la page web, connectez vous sur le lien http://localhost:8000

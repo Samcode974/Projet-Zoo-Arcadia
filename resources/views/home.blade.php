@@ -42,16 +42,15 @@
 </div>
 <hr>
 <article>
-        <div class="container p-4">
+        <div class="container text-center p-4">
+
             <h2 class="text-center text-primary">Découvrez nos différents habitats des animaux !!</h2>
             @foreach ( $habitats as $habitat )
-            <div class="row">
-                <div class="text-center align-items-center bg-warning col-4 col-lg-8">
-                    <ul>
-                        <li>{{$habitat->nom}}</li>
+                
+                    <ul class="list-group  align-items-center">
+                        <li class="list-group-item list-group-item-info">{{$habitat->nom}}</li>
                     </ul>
-                </div>
-            </div>
+             
             @endforeach
             <div class="text-center pt-4">
                 <a href="/habitats" class="btn btn-warning">Nos habitats</a>
@@ -63,7 +62,7 @@
             <h1>Nos services</h1>
             <h3>Retrouvez sur notre site propose différentes prestations qui vous sont proposer: </h3>
             @foreach ($services as $service )
-            <ul class="list-group">
+            <ul class="list-group align-items-center">
                 <li class="list-group-item list-group-item-info">{{$service->nom}}</li>
             </ul>
             @endforeach
@@ -75,7 +74,7 @@
     <article>
         <h1 class="text-center">Nos animaux</h1>
         @foreach ($animals as $animal )
-            <ul class="list-group">
+            <ul class="list-group align-items-center">
                 <li class="list-group-item list-group-item-info">{{$animal->prenom}}</li>
             </ul>
             @endforeach
@@ -96,6 +95,7 @@
                             <label for="descriptif" class="fw-bolder">Avis</label>
                             <textarea class="form-control" id="descriptif" name="avis"></textarea>
                         </div>
+
                     </div>
                     <div class="row justify-content-center align-items-center">
                         <button type="submit" class="btn btn-primary mt-3 mb-3 col-4 align-items-center">Envoyer votre avis</button>

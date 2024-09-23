@@ -6,14 +6,12 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServicesController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
+Route::permanentRedirect('/home', '/');
 Route::get('/habitats', [HabitatsController::class,'show'])->name('habitats');
 
 
-Route::get('/home', [HomeController::class, 'show'])->name('home');
+Route::get('/', [HomeController::class, 'show'])->name('home');
 Route::post('/avis', [AvisController::class,'add']);
 
 Route::get('/contact', function () {
